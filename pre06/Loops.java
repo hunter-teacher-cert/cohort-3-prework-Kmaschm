@@ -5,7 +5,31 @@ public class Loops {
     //System.out.println(squareRoot(9));
     //System.out.println(power(2, 10));
     //System.out.println(factorial(6));
+    //check(1);
+
+    // checking with x = 0.1, 1.0, 10.0, and 100.0
+    double x = 0.1;
+    for(int i = 1; i < 5; i++) {
+      check(x);
+      x *= 10.0;
+    }
+    // values very accurate for small x, but not accurate for larger x:
+    // 16 digits agree for x = 0.1
+    // 16 digits agree for x = 1.0
+    // 1 digit agrees for x = 10.0
+    // 0 digits agree for x = 100.0
+
+   // checking with x-valuesL -0.1, -1.0, -10.0, and -100.0
+    double y = -0.1;
+    for(int i = 1; i < 5; i++) {
+      check(y);
+      y *= 10.0;
+    }
+    //values accirate for -0.1 and -1.0, but widly inaccurate for -10.0 and -100.0
+
   }
+
+  // Exercise 2: squareRoot
 
   /**
   * Computes an approximation of the square root of a number
@@ -29,8 +53,10 @@ public class Loops {
     return newGuess;
   }
 
+  // Exercise 3: power
+
   /**
-  * Takes in x and n, returns x^n
+  * Computes given number to a given power: x^n
   * @param x double, base of power
   * @param n int, exponent (must be positive)
   * @return x^n
@@ -44,8 +70,10 @@ public class Loops {
     return xn;
   }
 
+  // Exercise 4: factorial
+
   /**
-  * Takes in an integer n and computes the factorial of n: n!
+  * Computes the factorial of n: n!
   *
   * @param n  integer that we are finding the factorial of.  Must be >= 0
   * @returns n!
@@ -61,6 +89,40 @@ public class Loops {
     }
     return result;
   }
+
+  // Exercise 5: myexp & check
+
+  /**
+  * Computes an approximation of e^x by summing the first n terms of the Taylor series 1 + x + x^2/2! + x^3/3! + x^4/4!+ ....
+  *
+  * @param x double
+  * @param n int
+  * @return approximation of e^x using first n terms of the Taylor series for e^x
+  */
+  public static double myexp(double x, int n) {
+    double num = 1.0;
+    double denom = 1.0;
+    double approx = 1.0;
+    for(int i = 1; i < n; i++) {
+      num = num * x;
+      denom = denom * i;
+      approx = approx + num / denom;
+    }
+    return approx;
+  }
+
+/**
+* Displays x, Taylor series approximation of e^x with first n terms, and Math.exp(x)
+*
+* @param x double
+* @param n int
+* 
+*/
+public static void check(double x) {
+  int n = 18; // nearly matching when n = 18 for e^1
+  System.out.println(x + "\t" + myexp(x, n) + "\t" + Math.exp(x));
+}
+
 
 
 }
