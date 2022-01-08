@@ -33,6 +33,7 @@ public class Array {
     // counts = histogram(scores, NUM_OF_COUNTERS);
     // System.out.println("Histogram: " + Arrays.toString(counts));
 
+ 
     
   }
 
@@ -84,4 +85,6 @@ public class Array {
     return counts;
   }
 
+
 }
+
