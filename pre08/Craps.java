@@ -7,7 +7,7 @@ public class Craps {
   /*
   * Simulates a game of Craps:
   *
-  * Main program must take in number of rounds, then play number of rounds specified, and output status of rounds as they occur
+  * Main program must take in number of rounds from the command line, then play number of rounds specified, and output status of rounds as they occur
   * 
   * Required methods: 
   * roll: takes an integer and returns a random number between 1 and the integer (inclusive)
@@ -19,7 +19,7 @@ public class Craps {
   * Rules for a round:
   * 1. Shooter rolls/shoots dice.
   *
-  * If shooter rolls:
+  * 2. If shooter rolls:
   * 2, 3, 12  --> Craps, shooter loses
   * 7, 11 --> Natural, shooter wins
   * Any other number not specified:
@@ -78,6 +78,23 @@ public class Craps {
     }
     return rollTotal;
   }
+
+
+  /**
+  * Simulates 1 round of Craps using two six-sided die, outputting status as rolls occur.  Returns whether the shooter has won or lost the round.
+  *
+  * Rules for a round:
+  * 1. Shooter rolls/shoots dice.
+  *
+  * 2. If shooter rolls:
+  * 2, 3, 12  --> Craps, shooter loses
+  * 7, 11 --> Natural, shooter wins
+  * Any other number not specified:
+  * value is now called Point
+  * shooter must roll until they roll Point (wins) or 7 (loses)
+  *
+  * @return String, "wins!" or "loses." based on whether the shooter has won or lost the round based on the rules
+  */
 
   public static String round() {
     final int NUM_OF_DICE = 2;
