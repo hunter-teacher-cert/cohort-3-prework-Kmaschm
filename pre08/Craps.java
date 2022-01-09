@@ -1,5 +1,5 @@
 import java.util.Random;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 
 public class Craps {
@@ -33,11 +33,13 @@ public class Craps {
   public static void main(String[] args) {
     //System.out.println(shoot(2, 6));
     String result;
-    int numOfRounds;
+    int numOfRounds = Integer.parseInt(args[0]);
     
-    Scanner in = new Scanner(System.in);
-    System.out.println("Welcome to Craps!  Please state how many rounds you'd like to play.");
-    numOfRounds = in.nextInt();
+    //Scanner in = new Scanner(System.in);
+    //System.out.println("Welcome to Craps!  Please state how many rounds you'd like to play.");
+    //numOfRounds = in.nextInt();
+
+    System.out.println("\nWelcome to Craps!  You have chosen to play " + numOfRounds + " rounds.\n");
 
     for(int i = 1; i <= numOfRounds; i++) {
       System.out.println("************* Starting Round " + i + " *************");
