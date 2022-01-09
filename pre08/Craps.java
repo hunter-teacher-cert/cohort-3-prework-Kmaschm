@@ -59,14 +59,42 @@ public class Craps {
   */
   public static int roll(int numSides) {
     Random rand = new Random();
-    return rand.nextInt(numSides) + 1;
+    int rollVal = rand.nextInt(numSides) + 1;
+    if(numSides == 6) {
+     drawRoll(rollVal);
+    }
+    return rollVal;
 
   }
+
+ /**
+ * Prints ASCII art of specified result of 6-sided die roll
+ *
+ * Uses ACSII drawings inspired by text result in https://codereview.stackexchange.com/questions/111337/pretty-print-dice-faces-from-multiple-rolls-of-multi-sided-dices
+ * 
+ * @param rollVal integer, value rolled on 6-sided die
+ */
+ public static void drawRoll(int rollVal) {
+    if(rollVal == 1) {
+        System.out.println("+-----+\n|     |\n|  o  |\n|     |\n+-----+");
+      } else if(rollVal == 2) {
+        System.out.println("+-----+\n|     |\n| o o |\n|     |\n+-----+");
+      } else if(rollVal == 3) {
+        System.out.println("+-----+\n| o   |\n|  o  |\n|   o |\n+-----+");
+      } else if(rollVal == 4) {
+         System.out.println("+-----+\n| o o |\n|     |\n| o o |\n+-----+");
+      } else if(rollVal == 5) {
+         System.out.println("+-----+\n| o o |\n|  o  |\n| o o |\n+-----+");
+      } else { // rolled a 6
+        System.out.println("+-----+\n| o o |\n| o o |\n| o o |\n+-----+");
+      }
+ }
+
 
 
   /**
   *  Simulates rolling specified number of n-sided dice.  Takes in an integer number of dice and an integer number of sides, returns total of score of all dice rolls
-  *
+  * System.out.println("+-----+\n|     |\n|  o  |\n|     |\n+-----+")
   * @param numDice    integer, specifies number of dice we will roll
   * @param numSides   integer, specifies the number of sides on each die
   * @return   integer, total value of all dice rolled
