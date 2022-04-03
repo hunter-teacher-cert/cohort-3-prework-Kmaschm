@@ -37,10 +37,9 @@ public class Max {
     int maxIndex = 0;
     int maxValue = a[0];
 
-    // System.out.println("a[" + i + "]: " + a[i]);
+// cannot use enhanced for loop, as we need to refer to the index
     for(int i = 0; i < a.length; i++) {
       if(a[i] > maxValue) {
-         // System.out.println("a[" + i + "] > " + maxValue );
         maxValue = a[i];
         maxIndex = i;
       }
@@ -48,6 +47,5 @@ public class Max {
 
     return maxIndex;
   }
-
-
+ 
 }
