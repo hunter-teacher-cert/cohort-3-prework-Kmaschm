@@ -4,7 +4,7 @@ public class Loops {
   public static void main(String[] args){
     //System.out.println(squareRoot(9));
     //System.out.println(squareRoot(12));
-    // System.out.println(power(2, 10));
+     System.out.println(power(2, 10));
     // System.out.println(factorial(6));
 
     /* Exercise 5 not needed:
@@ -69,8 +69,8 @@ public class Loops {
   * 
   */
   public static double power(double x, int n) {
-    double result = x;
-    for(int i=1; i < n; i++) {
+    double result = 1; // allows n = 0
+    for(int i = 0; i < n; i++) {
       result *= x;
     }
     return result;  // result = x^n
