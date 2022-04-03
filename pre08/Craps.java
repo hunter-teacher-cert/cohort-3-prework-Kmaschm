@@ -1,6 +1,4 @@
 import java.util.Random;
-//import java.util.Scanner;
-
 
 public class Craps {
 
@@ -26,18 +24,11 @@ public class Craps {
   * value is now called Point
   * shooter must roll until they roll Point (wins) or 7 (loses)
   *
-  * 
-  *  
   */
 
   public static void main(String[] args) {
-    //System.out.println(shoot(2, 6));
     String result;
     int numOfRounds = Integer.parseInt(args[0]);
-    
-    //Scanner in = new Scanner(System.in);
-    //System.out.println("Welcome to Craps!  Please state how many rounds you'd like to play.");
-    //numOfRounds = in.nextInt();
 
     System.out.println("\nWelcome to Craps!  You have chosen to play " + numOfRounds + " rounds.\n");
 
@@ -94,9 +85,9 @@ public class Craps {
 
   /**
   *  Simulates rolling specified number of n-sided dice.  Takes in an integer number of dice and an integer number of sides, returns total of score of all dice rolls
-  * System.out.println("+-----+\n|     |\n|  o  |\n|     |\n+-----+")
+*
   * @param numDice    integer, specifies number of dice we will roll
-  * @param numSides   integer, specifies the number of sides on each die
+  * @param numSides   integer, specifies the number of sides on each die (aka max value of the die)
   * @return   integer, total value of all dice rolled
   */
   public static int shoot(int numDice, int numSides) {
