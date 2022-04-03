@@ -3,29 +3,33 @@ public class Loops {
 
   public static void main(String[] args){
     //System.out.println(squareRoot(9));
-    //System.out.println(power(2, 10));
-    //System.out.println(factorial(6));
-    //check(1);
+    //System.out.println(squareRoot(12));
+    // System.out.println(power(2, 10));
+    // System.out.println(factorial(6));
 
-    // checking with x = 0.1, 1.0, 10.0, and 100.0
+    /* Exercise 5 not needed:
+    checking with x = 0.1, 1.0, 10.0, and 100.0
     double x = 0.1;
     for(int i = 1; i < 5; i++) {
       check(x);
       x *= 10.0;
-    }
+     }
+    */
+    
     // values very accurate for small x, but not accurate for larger x:
     // 16 digits agree for x = 0.1
     // 16 digits agree for x = 1.0
     // 1 digit agrees for x = 10.0
     // 0 digits agree for x = 100.0
 
-   // checking with x-valuesL -0.1, -1.0, -10.0, and -100.0
+   /* Exercise 5, not needed
+    checking with x-valuesL -0.1, -1.0, -10.0, and -100.0
     double y = -0.1;
     for(int i = 1; i < 5; i++) {
       check(y);
       y *= 10.0;
     }
-    //values accirate for -0.1 and -1.0, but widly inaccurate for -10.0 and -100.0
+    //values accirate for -0.1 and -1.0, but widly inaccurate for -10.0 and -100.0 */
 
   }
 
@@ -41,11 +45,13 @@ public class Loops {
     double currGuess = a/2;
     double newGuess;
     double diff;
+    final double MARGIN_OF_DIFF = 0.0001;
+      
     while(true) {
       newGuess = (currGuess + a/currGuess) / 2;
       diff = Math.abs(newGuess - currGuess);
-      // System.out.println("Current guess: " + currGuess + " New guess: "  + newGuess + " Difference: " + diff);
-     if (diff < 0.0001) {
+   
+     if (diff < MARGIN_OF_DIFF) { 
         break;
       }
       currGuess = newGuess;
@@ -63,11 +69,11 @@ public class Loops {
   * 
   */
   public static double power(double x, int n) {
-    double xn = x;
+    double result = x;
     for(int i=1; i < n; i++) {
-      xn *= x;
+      result *= x;
     }
-    return xn;
+    return result;  // result = x^n
   }
 
   // Exercise 4: factorial
@@ -99,7 +105,8 @@ public class Loops {
   * @param n int
   * @return approximation of e^x using first n terms of the Taylor series for e^x
   */
-  public static double myexp(double x, int n) {
+ /* 
+public static double myexp(double x, int n) {
     double num = 1.0;
     double denom = 1.0;
     double approx = 1.0;
@@ -109,7 +116,8 @@ public class Loops {
       approx = approx + num / denom;
     }
     return approx;
-  }
+  } 
+  */
 
 /**
 * Displays x, Taylor series approximation of e^x with first n terms, and Math.exp(x)
@@ -118,10 +126,12 @@ public class Loops {
 * @param n int
 * 
 */
+/* 
 public static void check(double x) {
   int n = 18; // nearly matching when n = 18 for e^1
   System.out.println(x + "\t" + myexp(x, n) + "\t" + Math.exp(x));
-}
+} 
+*/
 
 
 
