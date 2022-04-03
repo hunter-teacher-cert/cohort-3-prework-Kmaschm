@@ -33,7 +33,7 @@ public class Time {
     int prevMin = 4;
     int prevSec = 10;
 
-    int elapsedTime = (hour - prevHour)*SEC_IN_HOUR + (minute - prevMin)*SEC_IN_DAY + (second - prevSec);
+    int elapsedTime = (hour - prevHour)*SEC_IN_HOUR + (minute - prevMin)*SEC_IN_MIN + (second - prevSec);
 
     System.out.println("Elapsed time since start of exercise: " + elapsedTime);
 
