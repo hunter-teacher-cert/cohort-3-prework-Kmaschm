@@ -17,7 +17,9 @@ any not more
 It's breakfast 
 ! 
 
-3. Stack Diagram:
+
+Exercise 3: 
+Stack Diagram:
 nLines  n: 4
 nLines  n: 3
 nLines  n: 2
@@ -25,4 +27,3 @@ nLines  n: 1
 nLines  n: 0
 
 
-Exercise 3: 
