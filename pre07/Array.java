@@ -5,8 +5,8 @@ public class Array {
 
   public static void main(String[] args) {
     // Testing powArray:
-    double[] a = {5, 7, 2, -3, 1, 0, 0.5, 100};
-    System.out.println(Arrays.toString(powArray(a, 4)));
+    // double[] a = {5, 7, 2, -3, 1, 0, 0.5, 100};
+    // System.out.println(Arrays.toString(powArray(a, 4)));
 
 
     // Testing histogragram:
